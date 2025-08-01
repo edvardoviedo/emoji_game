@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #ffccf5;
+    color: #5a189a;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    touch-action: manipulation;
+}
+
+#game-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #e63946;
+    text-shadow: 2px 2px 0 #ffbe0b;
+}
+
+#start-screen {
+    background-color: #a8dadc;
+    border-radius: 20px;
+    box-shadow: 0 8px 0 #457b9d;
+    border: 4px solid #1d3557;
+}
+
+.form-group {
+    margin: 20px 0;
+}
+
+input {
+    font-family: 'Press Start 2P', cursive;
+    padding: 10px;
+    font-size: 0.8rem;
+    width: 80%;
+    max-width: 300px;
+    border: 3px solid #1d3557;
+    border-radius: 10px;
+    text-align: center;
+}
+
+button {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #ffbe0b;
+    color: #1d3557;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #e63946;
+    transition: all 0.1s;
+    text-transform: uppercase;
+}
+
+button:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #e63946;
+}
+
+.instructions {
+    margin-top: 20px;
+    font-size: 0.7rem;
+    line-height: 1.5;
+}
+
+#game-screen {
+    background-color: #bde0fe;
+    border-radius: 20px;
+    box-shadow: 0 8px 0 #457b9d;
+    border: 4px solid #1d3557;
+}
+
+.game-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.score-display {
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.game-area {
+    position: relative;
+    margin: 0 auto;
+}
+
+#game-board {
+    background-color: #cdb4db;
+    border: 3px solid #1d3557;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+.mobile-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.mobile-controls button {
+    padding: 15px;
+    font-size: 1.2rem;
+    flex: 1;
+    max-width: 80px;
+}
+
+#rotate-btn {
+    background-color: #a7c957;
+    box-shadow: 0 5px 0 #386641;
+}
+
+.leaderboard {
+    margin-top: 20px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #1d3557;
+}
+
+.leaderboard h3 {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.leaderboard ol {
+    font-size: 0.7rem;
+    list-style-position: inside;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.leaderboard li {
+    margin-bottom: 5px;
+}
+
+#game-over-screen {
+    background-color: #ffafcc;
+    border-radius: 20px;
+    box-shadow: 0 8px 0 #e63946;
+    border: 4px solid #1d3557;
+}
+
+#final-score {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: #1d3557;
+}
+
+@media (max-width: 400px) {
+    h1, h2 {
+        font-size: 1.2rem;
+    }
+    
+    button {
+        padding: 12px 20px;
+        font-size: 0.8rem;
+    }
+    
+    .mobile-controls button {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
