@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Puzzle Rush</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Pantalla de inicio -->
+        <div id="start-screen" class="screen">
+            <h1>Emoji Puzzle Rush</h1>
+            <div class="form-group">
+                <input type="text" id="player-name" placeholder="Tu nombre" maxlength="12">
+            </div>
+            <button id="start-btn">START</button>
+            <div class="instructions">
+                <p>¡Mueve los emojis para formar líneas!</p>
+                <p>Usa ← → para mover y ↑ para rotar</p>
+            </div>
+        </div>
+
+        <!-- Pantalla de juego -->
+        <div id="game-screen" class="screen hidden">
+            <div class="game-header">
+                <div class="score-display">
+                    <span id="player-display"></span>
+                    <span>Puntos: <span id="score">0</span></span>
+                </div>
+                <div class="controls">
+                    <button id="rotate-btn">↑ ROTAR</button>
+                </div>
+            </div>
+            <div class="game-area">
+                <canvas id="game-board"></canvas>
+                <div class="mobile-controls">
+                    <button id="left-btn">←</button>
+                    <button id="down-btn">↓</button>
+                    <button id="right-btn">→</button>
+                </div>
+            </div>
+            <div class="leaderboard">
+                <h3>Mejores Puntuaciones</h3>
+                <ol id="high-scores"></ol>
+            </div>
+        </div>
+
+        <!-- Pantalla de game over -->
+        <div id="game-over-screen" class="screen hidden">
+            <h2>¡FIN DEL JUEGO!</h2>
+            <p id="final-score"></p>
+            <button id="restart-btn">JUGAR DE NUEVO</button>
+            <div class="leaderboard">
+                <h3>Mejores Puntuaciones</h3>
+                <ol id="final-high-scores"></ol>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
